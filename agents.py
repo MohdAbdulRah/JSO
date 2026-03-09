@@ -39,7 +39,7 @@ def _ensure_gemini():
 def call_gemini(prompt: str, temperature: float = 0.4) -> str:
     """Call Gemini and return the text response."""
     _ensure_gemini()
-    model = genai.GenerativeModel("gemini-flash-latest")
+    model = genai.GenerativeModel("gemini-2.5-flash")
     response = model.generate_content(
         prompt,
         generation_config=genai.types.GenerationConfig(temperature=temperature),
